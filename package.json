@@ -6,7 +6,11 @@
   "type": "module",
   "scripts": {
     "build": "rollup -c",
-    "watch": "rollup -c -w"
+    "watch": "rollup -c -w",
+    "build:ts": "node scripts/build-ts.js",
+    "build:npm": "yarn build && yarn build:ts",
+    "release:local": "node scripts/publish.js",
+    "release": "cross-env NODE_ENV=production node scripts/publish.js"
   },
   "keywords": [],
   "author": "",
@@ -24,7 +28,9 @@
     "@rollup/plugin-typescript": "^11.1.6",
     "@typescript-eslint/parser": "^7.14.1",
     "core-js": "^3.37.1",
+    "cross-env": "^7.0.3",
     "rollup": "^4.18.0",
+    "tscpaths": "^0.0.9",
     "tslib": "^2.6.3",
     "typescript": "^5.5.2"
   },
