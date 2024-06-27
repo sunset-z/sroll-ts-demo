@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "outDir": "dist",
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true
+  },
+  "include": ["src"]
+}
