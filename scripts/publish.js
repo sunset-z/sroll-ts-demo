@@ -80,7 +80,7 @@ async function main() {
 
   // 继续发布
   try {
-    execSync(`npm publish ${tgzFilePath}`, { stdio: 'inherit' });
+    execSync(`npm publish ${tgzFilePath} --access=public`, { stdio: 'inherit' });
     console.log('------------ Package published successfully ------------');
   } catch (error) {
     console.error('------------ Failed to publish package:', error.message, '------------');
